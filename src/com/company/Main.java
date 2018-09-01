@@ -37,7 +37,8 @@ public class Main {
         }
     }
     static  void deleteRecord(Owner owner){
-        owner
+        owner.deleteRecordList();
+        System.out.println("Records deleted successfully");
     }
 
 }
