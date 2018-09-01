@@ -13,6 +13,12 @@ public class Owner {
     String privateKey;
 
     public Owner(){}
+    public List<Node> getRecordList(){
+        return recordList;
+    }
+    public void deleteRecordList(){
+        recordList = null;
+    }
     private long createTimeStamp(){
 
         Date date= new Date();
@@ -26,6 +32,7 @@ public class Owner {
     public Node createGenesisNode(String data){
 
         Node node = new Node(createTimeStamp(),data,0,createUniqueId(),null,null);
+        recordList.add(node);
         return node;
     }
 

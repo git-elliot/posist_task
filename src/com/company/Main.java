@@ -12,19 +12,32 @@ public class Main {
         Owner owner = new Owner();
         int ch = scanner.nextInt();
         switch(ch){
-            case 1 : createRecord();
+            case 1 : createRecord(owner);
                      break;
-            case 2 : deleteRecord();
+            case 2 : displayRecord(owner);
+                     break;
+            case 3 : deleteRecord(owner);
                      break;
             default: System.out.println("You have entered wrong value");
         }
     }
-    static void createRecord(){
-
+    static void createRecord(Owner owner){
+        Scanner scanner = new Scanner(System.in);
+         owner.createGenesisNode(scanner.next());
+         System.out.println("A record has been created");
     }
-
-    static  void deleteRecord(){
-
+    static void displayRecord(Owner owner){
+        List<Node> records = owner.getRecordList();
+        if(records == null){
+            System.out.println("No records found. Please inserts first");
+        }
+        int len = records.size();
+        for(int i=0;i<len;i++){
+            System.out.println(records.get(i).getNodeId());
+        }
+    }
+    static  void deleteRecord(Owner owner){
+        owner
     }
 
 }
