@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Starting POSist Task\n\n1. Create Record\n2. List Records\n3. Delete Record");
+        System.out.println("Starting POSist Task\n\n1. Create Record\n2. Display Records\n3. Delete Record");
         Owner owner = new Owner();
         int ch = scanner.nextInt();
         switch(ch){
