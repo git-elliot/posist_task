@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Owner {
-    List<Node> recordList;
+    List<Node> recordList = new ArrayList<>();
     String ownerId;
     String publicKey;
     String privateKey;
@@ -17,7 +17,7 @@ public class Owner {
         return recordList;
     }
     public void deleteRecordList(){
-        recordList = null;
+        recordList = new ArrayList<>();
     }
     private long createTimeStamp(){
 
