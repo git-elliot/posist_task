@@ -1,4 +1,4 @@
-# posist_task
+# POSist Task
 
 ### Steps to compile
 
